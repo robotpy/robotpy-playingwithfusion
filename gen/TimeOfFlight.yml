@@ -1,0 +1,23 @@
+---
+
+classes:
+  TimeOfFlight:
+    shared_ptr: true
+    enums:
+      RangingMode:
+      Status:
+    methods:
+      TimeOfFlight:
+      IdentifySensor:
+      GetFirmwareVersion:
+      GetSerialNumber:
+      IsRangeValid:
+      GetRange:
+      GetRangeSigma:
+      GetAmbientLightLevel:
+      GetStatus:
+      SetRangingMode:
+      SetRangeOfInterest:
+      PIDGet:
+      SetPIDSourceType:
+      InitSendable:

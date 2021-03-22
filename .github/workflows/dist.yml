@@ -150,10 +150,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: actions/download-artifact@v2
-      with:
-        name: dist-windows-2019
-        path: dist/
+    # - uses: actions/download-artifact@v2
+    #   with:
+    #     name: dist-windows-2019
+    #     path: dist/
 
     - uses: actions/download-artifact@v2
       with:

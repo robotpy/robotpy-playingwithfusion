@@ -24,8 +24,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        # os: [windows-2019, macos-10.15, ubuntu-18.04]
-        os: [macos-10.15, ubuntu-18.04]
+        os: [windows-2019, macos-10.15, ubuntu-18.04]
         python_version: [3.6, 3.7, 3.8, 3.9]
         # architecture: [x86, x64]
         architecture: [x64]
@@ -150,10 +149,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # - uses: actions/download-artifact@v2
-    #   with:
-    #     name: dist-windows-2019
-    #     path: dist/
+    - uses: actions/download-artifact@v2
+      with:
+        name: dist-windows-2019
+        path: dist/
 
     - uses: actions/download-artifact@v2
       with:

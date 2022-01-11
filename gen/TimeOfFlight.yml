@@ -3,6 +3,8 @@
 classes:
   TimeOfFlight:
     shared_ptr: true
+    ignored_bases:
+    - wpi::SendableHelper<TimeOfFlight>
     enums:
       RangingMode:
       Status:

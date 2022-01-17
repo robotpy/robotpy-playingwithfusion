@@ -14,6 +14,9 @@ jobs:
     uses: robotpy/build-actions/.github/workflows/package-ci.yml@v2022
     with:
       osx_target: 11
+      enable_sphinx_check: false
+      matrix_os: >-
+        ["windows-latest", "ubuntu-18.04"]
     secrets:
       SSH_USER: ${{ secrets.SSH_USER }}
       SSH_KEY: ${{ secrets.SSH_KEY }}

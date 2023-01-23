@@ -6,17 +6,17 @@ author_email = "robotpy@googlegroups.com"
 url = "https://github.com/robotpy/robotpy-playingwithfusion"
 license = "BSD-3-Clause"
 install_requires = [
-    "robotpy-wpiutil<2024.0.0,>=2023.1.1.0",
-    "robotpy-wpimath<2024.0.0,>=2023.1.1.0",
-    "wpilib<2024.0.0,>=2023.1.1.0",
+    "robotpy-wpiutil<2024.0.0,>=2023.2.1.0",
+    "robotpy-wpimath<2024.0.0,>=2023.2.1.0",
+    "wpilib<2024.0.0,>=2023.2.1.0",
 ]
 
 [build-system]
 requires = [
-    "robotpy-build<2024.0.0,>=2023.0.0",
-    "robotpy-wpiutil<2024.0.0,>=2023.1.1.0",
-    "robotpy-wpimath<2024.0.0,>=2023.1.1.0",
-    "wpilib<2024.0.0,>=2023.1.1.0",
+    "robotpy-build<2024.0.0,>=2023.0.1",
+    "robotpy-wpiutil<2024.0.0,>=2023.2.1.0",
+    "robotpy-wpimath<2024.0.0,>=2023.2.1.0",
+    "wpilib<2024.0.0,>=2023.2.1.0",
 ]
 
 [tool.robotpy-build]
@@ -26,7 +26,7 @@ base_package = "playingwithfusion"
 artifact_id = "PlayingWithFusion-driver"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2023.00.17"
+version = "2023.01.17"
 
 libs = ["PlayingWithFusionDriver"]
 
@@ -38,7 +38,7 @@ depends = ["wpilib_core", "wpiutil"]
 artifact_id = "PlayingWithFusion-cpp"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2023.00.17"
+version = "2023.01.17"
 
 libs = ["PlayingWithFusion"]
 

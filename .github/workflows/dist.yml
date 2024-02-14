@@ -11,7 +11,7 @@ on:
 
 jobs:
   ci:
-    # Ok yup
+    # Ok
     uses: robotpy/build-actions/.github/workflows/package-ci.yml@ccache-debug
     with:
       enable_sphinx_check: false

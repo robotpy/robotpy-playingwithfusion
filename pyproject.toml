@@ -32,7 +32,7 @@ libs = ["PlayingWithFusionDriver"]
 
 [tool.robotpy-build.wrappers."playingwithfusion._pwf_driver"]
 name = "playingwithfusion_driver"
-depends = ["wpilib_core", "wpiutil"]
+depends = ["wpilib_core", "wpiHal", "wpiutil"]
 
 [tool.robotpy-build.wrappers."playingwithfusion".maven_lib_download]
 artifact_id = "PlayingWithFusion-cpp"
@@ -48,7 +48,7 @@ sources = [
     "playingwithfusion/pwf.cpp"
 ]
 
-depends = ["wpilibc", "wpilib_core", "wpiutil", "playingwithfusion_driver"]
+depends = ["wpilibc", "wpilib_core", "wpiHal", "wpiutil", "playingwithfusion_driver"]
 
 generate = [
     { CANVenom = "CANVenom.h" },

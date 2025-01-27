@@ -26,7 +26,7 @@ base_package = "playingwithfusion"
 artifact_id = "PlayingWithFusion-driver"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2025.01.04"
+version = "2025.01.23"
 
 libs = ["PlayingWithFusionDriver"]
 
@@ -38,7 +38,7 @@ depends = ["wpilib_core", "wpiHal", "wpiutil"]
 artifact_id = "PlayingWithFusion-cpp"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2025.01.04"
+version = "2025.01.23"
 
 libs = ["PlayingWithFusion"]
 

@@ -1,8 +1,6 @@
----
 
 classes:
-  TMD37003:
-    shared_ptr: true
+  pwf::TMD37003:
     methods:
       TMD37003:
       ConfigureColorSense:

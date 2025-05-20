@@ -1,4 +1,4 @@
-*.pyc
+*.py[ciod]
 *.so
 __pycache__
 
@@ -7,24 +7,14 @@ __pycache__
 .vscode
 
 *.egg-info
-build
-dist
+/build
+/dist
+/lib
 
 /playingwithfusion/version.py
-/playingwithfusion/_init_playingwithfusion.py
-/playingwithfusion/include
-/playingwithfusion/lib
-/playingwithfusion/rpy-include
-/playingwithfusion/pkgcfg.py
-
-/playingwithfusion/_pwf_driver/_init_playingwithfusion_driver.py
-/playingwithfusion/_pwf_driver/include
-/playingwithfusion/_pwf_driver/lib
-/playingwithfusion/_pwf_driver/rpy-include
-/playingwithfusion/_pwf_driver/pkgcfg.py
-
+/playingwithfusion/_init__playingwithfusion.py
+/playingwithfusion/trampolines
+/playingwithfusion/playingwithfusion.pc
 
 *.dylib
 *.dll
-
-rev/rpy-include

@@ -1,3 +1,3 @@
-#include <rpygen_wrapper.hpp>
+#include <semiwrap_init.playingwithfusion._playingwithfusion.hpp>
 
-RPYBUILD_PYBIND11_MODULE(m) { initWrapper(m); }
+SEMIWRAP_PYBIND11_MODULE(m) { initWrapper(m); }

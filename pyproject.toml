@@ -1,60 +1,80 @@
-[tool.robotpy-build.metadata]
-name = "robotpy-playingwithfusion"
-description = "PlayingWithFusion for RobotPy"
-author = "RobotPy Development Team"
-author_email = "robotpy@googlegroups.com"
-url = "https://github.com/robotpy/robotpy-playingwithfusion"
-license = "BSD-3-Clause"
-install_requires = [
-    "robotpy-wpiutil<2026.0.0,>=2025.3.2",
-    "robotpy-wpimath<2026.0.0,>=2025.3.2",
-    "wpilib<2026.0.0,>=2025.3.2",
-]
-
 [build-system]
+build-backend = "hatchling.build"
 requires = [
-    "robotpy-build~=2025.1.0",
+    "hatchling",
+    "hatch-vcs",
+    "semiwrap~=0.1",
+    "hatch-meson~=0.1.0b2",
+    "hatch-robotpy~=0.2.0",
+    "wpilib~=2025.3.2.2",
+]
+
+
+[project]
+name = "robotpy-playingwithfusion"
+dynamic = ["version"]
+description = "PlayingWithFusion for RobotPy"
+license = "BSD-3-Clause"
+dependencies = [
     "robotpy-wpiutil<2026.0.0,>=2025.3.2",
     "robotpy-wpimath<2026.0.0,>=2025.3.2",
     "wpilib<2026.0.0,>=2025.3.2",
 ]
 
-[tool.robotpy-build]
-base_package = "playingwithfusion"
+[[project.authors]]
+name = "RobotPy Development Team"
+email = "robotpy@googlegroups.com"
 
-[tool.robotpy-build.wrappers."playingwithfusion._pwf_driver".maven_lib_download]
+[project.urls]
+"Source code" = "https://github.com/robotpy/robotpy-playingwithfusion"
+
+
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "playingwithfusion/version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["playingwithfusion"]
+
+
+[[tool.hatch.build.hooks.robotpy.maven_lib_download]]
 artifact_id = "PlayingWithFusion-driver"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
 version = "2025.01.23"
+staticlibs = ["PlayingWithFusionDriver"]
+extract_to = "lib"
 
-libs = ["PlayingWithFusionDriver"]
-
-[tool.robotpy-build.wrappers."playingwithfusion._pwf_driver"]
-name = "playingwithfusion_driver"
-depends = ["wpilib_core", "wpiHal", "wpiutil"]
-
-[tool.robotpy-build.wrappers."playingwithfusion".maven_lib_download]
+[[tool.hatch.build.hooks.robotpy.maven_lib_download]]
 artifact_id = "PlayingWithFusion-cpp"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
 version = "2025.01.23"
+staticlibs = ["PlayingWithFusion"]
+extract_to = "lib"
 
-libs = ["PlayingWithFusion"]
 
-[tool.robotpy-build.wrappers."playingwithfusion"]
+[tool.hatch.build.hooks.semiwrap]
+
+[tool.hatch.build.hooks.meson]
+
+
+[tool.semiwrap]
+update_init = ["playingwithfusion"]
+
+[tool.semiwrap.extension_modules."playingwithfusion._playingwithfusion"]
 name = "playingwithfusion"
-sources = [
-    "playingwithfusion/pwf.cpp"
+
+depends = ["wpilib"]
+
+includes = [
+    "lib/include"
 ]
 
-depends = ["wpilibc", "wpilib_core", "wpiHal", "wpiutil", "playingwithfusion_driver"]
-
-generate = [
-    { CANVenom = "CANVenom.h" },
-    { TMD37003 = "TMD37003.h" },
-    { TimeOfFlight = "TimeOfFlight.h" },
-]
-
-generation_data = "gen"
-
+[tool.semiwrap.extension_modules."playingwithfusion._playingwithfusion".headers]
+CANVenom = "CANVenom.h"
+TMD37003 = "TMD37003.h"
+TimeOfFlight = "TimeOfFlight.h"

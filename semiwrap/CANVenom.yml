@@ -1,8 +1,6 @@
----
 
 classes:
-  CANVenom:
-    shared_ptr: true
+  pwf::CANVenom:
     ignored_bases:
     - wpi::SendableHelper<CANVenom>
     enums:

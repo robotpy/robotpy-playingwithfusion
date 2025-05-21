@@ -1,8 +1,6 @@
----
 
 classes:
-  TimeOfFlight:
-    shared_ptr: true
+  pwf::TimeOfFlight:
     ignored_bases:
     - wpi::SendableHelper<TimeOfFlight>
     enums:

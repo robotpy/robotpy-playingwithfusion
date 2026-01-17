@@ -3,10 +3,10 @@ build-backend = "hatchling.build"
 requires = [
     "hatchling",
     "hatch-vcs",
-    "semiwrap~=0.1",
-    "hatch-meson~=0.1.0b2",
-    "hatch-robotpy~=0.2.0",
-    "wpilib~=2025.3.2.2",
+    "semiwrap~=0.2.6",
+    "hatch-meson~=0.1.0",
+    "hatch-robotpy~=0.2.1",
+    "wpilib~=2026.2.1",
 ]
 
 
@@ -16,9 +16,7 @@ dynamic = ["version"]
 description = "PlayingWithFusion for RobotPy"
 license = "BSD-3-Clause"
 dependencies = [
-    "robotpy-wpiutil<2026.0.0,>=2025.3.2",
-    "robotpy-wpimath<2026.0.0,>=2025.3.2",
-    "wpilib<2026.0.0,>=2025.3.2",
+    "wpilib<2027.0.0,>=2026.1.1",
 ]
 
 [[project.authors]]
@@ -44,7 +42,7 @@ packages = ["playingwithfusion"]
 artifact_id = "PlayingWithFusion-driver"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2025.01.23"
+version = "2026.1.16"
 staticlibs = ["PlayingWithFusionDriver"]
 extract_to = "lib"
 
@@ -52,7 +50,7 @@ extract_to = "lib"
 artifact_id = "PlayingWithFusion-cpp"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2025.01.23"
+version = "2026.1.16"
 staticlibs = ["PlayingWithFusion"]
 extract_to = "lib"
 

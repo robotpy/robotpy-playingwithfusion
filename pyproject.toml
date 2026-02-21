@@ -42,7 +42,7 @@ packages = ["playingwithfusion"]
 artifact_id = "PlayingWithFusion-driver"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2026.1.16"
+version = "2026.2.13"
 staticlibs = ["PlayingWithFusionDriver"]
 extract_to = "lib"
 
@@ -50,7 +50,7 @@ extract_to = "lib"
 artifact_id = "PlayingWithFusion-cpp"
 group_id = "com.playingwithfusion.frc"
 repo_url = "https://www.playingwithfusion.com/frc/maven"
-version = "2026.1.16"
+version = "2026.2.13"
 staticlibs = ["PlayingWithFusion"]
 extract_to = "lib"
 
